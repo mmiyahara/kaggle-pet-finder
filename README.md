@@ -1,4 +1,4 @@
-# [kaggle-brain-tumor](https://www.kaggle.com/c/rsna-miccai-brain-tumor-radiogenomic-classification)
+# [kaggle-pet-finder](https://www.kaggle.com/c/petfinder-pawpularity-score)
 
 ![schedule](assets/diagram.png)
 
@@ -30,11 +30,11 @@
 
 ## Docs
 
-| Title | Read       | Comment |
-| ----- | ---------- | ------- |
-|       | 2021/10/xx |         |
-|       | 2021/10/xx |         |
-|       | 2021/10/xx |         |
+| Title                                                                                            | Read       | Comment |
+| ------------------------------------------------------------------------------------------------ | ---------- | ------- |
+| [つくりながら学ぶ! PyTorch による発展ディープラーニング](https://www.amazon.co.jp/dp/4839970254) | 2021/10/xx |         |
+|                                                                                                  | 2021/10/xx |         |
+|                                                                                                  | 2021/10/xx |         |
 
 ## Diary
 
@@ -56,3 +56,52 @@
 ### 2021/10/04
 
 - とりあえず LightGBM で回してみた([2021/10/03 Pet Finder - Light GBM Baseline](https://www.kaggle.com/mstkmyhr/2021-10-03-pet-finder-light-gbm-baseline))(score: , time: )
+
+- PyTorch の使い方、ディープラーニングでの標準的なワークフローについて知るため、[つくりながら学ぶ! PyTorch による発展ディープラーニング](https://www.amazon.co.jp/dp/4839970254) を読み始めた。
+
+  - PyTorch 日本語チュートリアル翻訳者が書いた本で、チュートリアルの訳注がわかりやすかったので購入
+
+- [211004_01_image_classification.ipynb - Colaboratory](https://colab.research.google.com/drive/1xzfcu9Oe3pizjKA7lWNJqP1kYVdAIt3w#scrollTo=XzK_GlZyhHff)
+
+- [zipfile --- ZIP アーカイブの処理 — Python 3.9.4 ドキュメント](https://docs.python.org/ja/3/library/zipfile.html#zipfile-objects)
+
+  - Python 組み込みモジュール。JavaScript には外部ライブラリしかないはず。組み込みで容易されてるのは便利。
+
+  ```python
+  path = '/path/to/zipfile.zip'
+  dist_dir = '/path/to/distdir'
+  zip = zipfile.ZipFile(path)
+  zip.extractall(dist_dir)
+  zip.close()
+  ```
+
+- [Pillow — Pillow (PIL Fork) 8.3.2 documentation](https://pillow.readthedocs.io/en/stable/)
+
+  - 画像処理用のライブラリ。OpenCV ほど多機能ではないが、拡大、回転などの基本機能があって使いやすい。
+
+  ```python
+  # TBD
+  ```
+
+- [pytorch/vision: Datasets, Transforms and Models specific to Computer Vision](https://github.com/pytorch/vision)
+
+  - ポピュラーなデータセット（ImageNet 等）や学習済みモデル、画像処理用の関数などが含まれているモジュール。
+
+  ```python
+  # 学習済みモデルの読み込み
+  from torchvision import models
+  net = models.vgg16(pretrained=True)
+  print(net)
+  # VGG(
+  #   (features): Sequential(
+  #     (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  #     ...
+  #     (6): Linear(in_features=4096, out_features=1000, bias=True)
+  #   )
+  # )
+  ```
+
+- [VGG16 - Visual Geometry Group - University of Oxford](https://www.robots.ox.ac.uk/~vgg/research/very_deep/)
+  - [ ] [vision/vgg.py at main · pytorch/vision](https://github.com/pytorch/vision/blob/main/torchvision/models/vgg.py)
+  - [ ] [VGG16 について調べてみた | bassbone's blog](https://blog.bassbone.tokyo/archives/652)
+  - [ ] [[1409.1556] Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)
