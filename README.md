@@ -105,3 +105,25 @@
   - [ ] [vision/vgg.py at main · pytorch/vision](https://github.com/pytorch/vision/blob/main/torchvision/models/vgg.py)
   - [ ] [VGG16 について調べてみた | bassbone's blog](https://blog.bassbone.tokyo/archives/652)
   - [ ] [[1409.1556] Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)
+
+### 2021/10/05
+
+- [torchvision.transforms — Torchvision 0.10.0 documentation](https://pytorch.org/vision/stable/transforms.html)
+
+  - PyTorch で用意されている画像変換のモジュール
+  - [Illustration of transforms — Torchvision 0.10.0 documentation](https://pytorch.org/vision/stable/auto_examples/plot_transforms.html)
+  - [Tensor transforms and JIT — Torchvision 0.10.0 documentation](https://pytorch.org/vision/stable/auto_examples/plot_scripted_tensor_transforms.html#sphx-glr-auto-examples-plot-scripted-tensor-transforms-py)
+
+- [NumPy 配列 ndarray を任意の最小値・最大値に収める clip | note.nkmk.me](https://note.nkmk.me/python-numpy-clip/)
+
+  - 引数に最小値、最大値を取り、範囲外の値を最小値、最大値に置き換える
+  - 0.0 - 1.0、0 - 255 に置き換えるときによく使う
+
+  ```python
+  a = np.arange(10)
+  print(a)
+  # [0 1 2 3 4 5 6 7 8 9]
+
+  print(np.clip(a, 2, 8))
+  # [2 2 2 3 4 5 6 7 8 8]
+  ```
