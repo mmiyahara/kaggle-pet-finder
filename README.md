@@ -127,3 +127,20 @@
   print(np.clip(a, 2, 8))
   # [2 2 2 3 4 5 6 7 8 8]
   ```
+
+### 2021/10/06
+
+- [plt.subplot() or plt.subplots()? Understanding state-based vs. object-oriented programming in Pyplot | by Kaleb Nyquist | Towards Data Science](https://towardsdatascience.com/plt-subplot-or-plt-subplots-understanding-state-based-vs-object-oriented-programming-in-pyplot-4ba0c7283f5d)
+  - Matplotlib の plt.subplot と plt.subplots の違い。わかりやすい
+
+### 2021/10/08
+
+- [torchvision.transforms — Torchvision 0.10.0 documentation](https://pytorch.org/vision/stable/transforms.html)
+  - [torchvision.transforms.RandomResizedCrop](https://pytorch.org/vision/stable/transforms.html#torchvision.transforms.RandomResizedCrop)
+    `RandomResizedCrop(size, scale, ratio)`  
+    `scale=(min,max)` で min から max の大きさで画像を縮小・拡大。  
+    `ratio=(min,max)` でアスペクト比（画像の縦横比）を min から max の間で変更して画像を縦横に引き伸ばす。  
+    `resize` で指定した大きさで画像を切り出す。
+  - [torchvision.transforms.RandomHorizontalFlip](https://pytorch.org/vision/stable/transforms.html#torchvision.transforms.RandomHorizontalFlip)
+    `RandomHorizontalFlip(p)`  
+    `p` の確率で画像の左右を反転する。
